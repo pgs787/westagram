@@ -1,0 +1,210 @@
+/* body */
+* {
+  box-sizing: border-box;
+}
+.div-total-section {
+  display: flex;
+  height: 750px;
+  margin-bottom: 50px;
+}
+.main-div {
+  display: flex;
+  margin: 100px auto 0px;
+  position: relative;
+}
+
+/* main */
+/* content */
+
+/*left*/
+@keyframes img {
+  from {
+    opacity: 0;
+  }
+  to {
+    overflow: 1;
+  }
+}
+
+.mainImage {
+  position: absolute;
+  visibility: hidden;
+  background-color: white;
+}
+.visable {
+  position: absolute;
+  width: 244px;
+  height: 434px;
+  left: 154px;
+  top: 62px;
+  visibility: visible;
+  background-repeat: no-repeat;
+  background-size: 100%;
+  visibility: visible;
+  z-index: 2;
+  animation: img 1.5s ease-in;
+}
+.mist {
+  z-index: 1;
+  height: 434px;
+  left: 154px;
+  top: 62px;
+  position: absolute;
+  visibility: visible;
+}
+
+.login-img {
+  height: 630px;
+  margin-top: -40px;
+  margin-right: -15px;
+  position: relative;
+}
+/*right*/
+.info {
+  width: 350px;
+  text-align: center;
+}
+
+.div-info {
+  height: 370px;
+  border: 1px solid #e6e6e6;
+  border-radius: 2px;
+  margin-bottom: 10px;
+}
+
+.div-info img {
+  display: flex;
+  width: 175px;
+  margin: 30px auto 12px;
+}
+
+.info-main-wrapper {
+  width: 250px;
+  margin: 0 auto;
+}
+
+.info-main {
+  margin: 24px auto 15px;
+}
+
+.info-main input {
+  background: #fafafa;
+  border: 1px solid #efefef;
+  border-radius: 3px;
+  color: #999;
+  padding: 0px 10px;
+  width: 100%;
+  height: 40px;
+  margin-bottom: 5px;
+  font-size: 12px;
+}
+.info-main input:nth-last-child(1) {
+  margin-bottom: 0px;
+}
+
+.login-btn {
+  background-color: rgba(var(--h5f, 56, 151, 240), 0.3);
+  border-style: none;
+  border-radius: 3px;
+  width: 100%;
+  height: 30px;
+  color: white;
+  font-weight: 600;
+  font-size: 14px;
+}
+
+.spe-line {
+  display: flex;
+  margin: 18px auto 28px;
+}
+.spe-line .line {
+  margin: auto auto;
+  width: 38%;
+  height: 1px;
+  background-color: #e6e6e6;
+}
+
+.login-fb {
+  display: flex;
+  justify-content: center;
+  font-size: 13px;
+  margin-bottom: 20px;
+}
+.login-fb img {
+  margin: 0 7px 0px 0px;
+  width: 17px;
+}
+.fb-font {
+  margin: auto 0px;
+  color: #385185;
+  font-weight: 600;
+}
+.lose-pwd {
+  text-align: center;
+  color: #385185;
+}
+
+/* 오른쪽 중앙 가입 div*/
+.div-sign {
+  display: flex;
+  justify-content: center;
+  font-size: 14px;
+  width: 100%;
+  padding: 25px 0;
+  border: 1px solid #e6e6e6;
+  margin-bottom: 25px;
+}
+.div-sign .sign {
+  color: #3897f0;
+  font-weight: 600;
+}
+
+.down-icon {
+  display: flex;
+  justify-content: center;
+}
+.down-icon img {
+  width: 40%;
+  margin-right: 10px;
+}
+.down-icon img:hover {
+  cursor: pointer;
+}
+.down-icon img:nth-last-child(1) {
+  margin: 0;
+}
+
+.login-btn,
+.sign,
+.lose-pwd,
+.fb-font,
+.foot-left div .down-icon img:hover {
+  cursor: pointer;
+}
+
+/* 하단 */
+
+.foot-wrap {
+  width: 1100px;
+  margin: 0 auto;
+  position: relative;
+  height: 50px;
+  color: black;
+  display: flex;
+  justify-content: space-between;
+}
+.foot-left {
+  font-size: 11px;
+  display: flex;
+  font-weight: 600;
+  color: #003569;
+}
+.foot-left span {
+  margin-right: 20px;
+}
+.foot-right {
+  margin-right: 50px;
+  color: #999;
+  font-weight: 600;
+  font-size: 10px;
+}

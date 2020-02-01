@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width" />
+    <title>Westagram</title>
+
+    <link href="css/login.css" rel="stylesheet" type="text/css" />
+    <link href="https://fonts.googleapis.com/css?family=Nanum+Gothic|Open+Sans&display=swap" rel="stylesheet" />
+    <link
+      rel="icon"
+      href="img/favicon.ico"
+    />
+  </head>
+  <body>
+    <div class="div-total-section">
+      <main class="main-div">
+        <img class="mainImage visable" src="img/1.jpg" />
+        <img class="mainImage" src="img/2.jpg" />
+        <img class="mainImage" src="img/3.jpg" />
+        <img class="mainImage" src="img/4.jpg" />
+        <img class="mainImage" src="img/5.jpg" />
+ 
+        <img
+          class="login-img"
+          id="main-div"
+          src="img/43cc71bb1b43.png"
+          alt="main_img"
+        />
+
+        <div class="info">
+          <div class="div-info">
+            <img src="img/title.png" alt="title" />
+            <div class="info-main-wrapper">
+              <div class="info-main">
+                <input
+                  class="important"
+                  id="id"
+                  type="text"
+                  placeholder="전화번호, 사용자 이름 또는 이메일"
+                  autofocus
+                  required
+                  minlength="1"
+                />
+                <input
+                  class="important"
+                  id="password"
+                  type="password"
+                  placeholder="비밀번호"
+                  required
+                  minlength="1"
+                />
+              </div>
+              <button class="login-btn" id="logBtn">로그인</button>
+              <div class="spe-line">
+                <div class="line"></div>
+                <div
+                  style="margin: 0 15px; font-size: 13px; font-weight: 600;color: rgba(var(--f52,153,153,153),1);"
+                >
+                  또는
+                </div>
+                <div class="line"></div>
+              </div>
+              <div class="login-fb">
+                <img src="img/facebook.svg" />
+                <div class="fb-font">Facebook으로 로그인</div>
+              </div>
+              <div class="lose-pwd">비밀번호를 잊으셨나요?</div>
+            </div>
+          </div>
+          <div class="div-sign">
+            <div>계정이 없으신가요?&nbsp;</div>
+            <div class="sign">가입하기</div>
+          </div>
+          <div style="font-size: 14px; margin-bottom: 20px;">
+            앱을 다운로드하세요.
+          </div>
+          <div class="down-icon">
+            <img src="img/4a5c9d62d51b.png" alt="appstore" onclick="location.href='https://apps.apple.com/kr/app/instagram/id389801252'" />
+            <img src="img/f155b664a93b.png" alt="googleplay" onclick="location.href='https://play.google.com/store/apps/details?id=com.instagram.android'"  />
+          </div>
+        </div>
+      </main>
+    </div>
+    <footer>
+      <div class="foot-wrap">
+        <div class="foot-left">
+          <span>INSTAGRAM 정보</span>
+          <span>도움말</span>
+          <span>홍보센터</span>
+          <span>API</span>
+          <span>채용 정보</span>
+          <span>개인정보처리방침</span>
+          <span>약관</span>
+          <span>디렉터리</span>
+          <span>프로필</span>
+          <span>해시태그</span>
+          <span>언어</span>
+        </div>
+        <div class="foot-right">© 2020 INSTAGRAM FROM FACEBOOK</div>
+      </div class="foot-wrap">
+    </footer>
+    <script src="js/login.js"></script>
+  </body>
+</html>
