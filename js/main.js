@@ -25,7 +25,6 @@ const heartOn = e => {
 const addBtn = () => {
   const div = document.createElement("div");
   const a = document.createElement("a");
-
   const heart = document.createElement("img");
   const span = commentText.value;
   heart.className = "comment-heart";
@@ -42,8 +41,7 @@ const addBtn = () => {
   commentText.value = "";
 
   // 댓글 삭제 기능
-  const commentDel = a.parentElement;
-  commentDel.addEventListener("click", function(e) {
+  div.addEventListener("click", function(e) {
     e.target.remove();
   });
 };
