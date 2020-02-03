@@ -32,7 +32,7 @@ const pwdAttr = () => {
 };
 
 // 아이디 비밀번호 입력시 없으면 스타일 지정 x 있으면 속성적용
-const keypr = e => {
+const keypr = () => {
   if (!id.value) {
     idInput.style = "unset";
   } else if (id.value) {
@@ -50,7 +50,8 @@ const spanMove = e => {
   if (e.target === idInput) {
     id.focus();
     id.addEventListener("input", keypr);
-  } else if (pwdInput === e.target) {
+  }
+  if (e.target === pwdInput) {
     pwd.focus();
     pwd.addEventListener("input", keypr);
   }

@@ -21,10 +21,11 @@ const heartOn = e => {
     toggle = true;
   }
 };
-
+// 댓글 생성 버튼
 const addBtn = () => {
   const div = document.createElement("div");
   const a = document.createElement("a");
+
   const heart = document.createElement("img");
   const span = commentText.value;
   heart.className = "comment-heart";
@@ -36,11 +37,17 @@ const addBtn = () => {
   div.append(span);
   div.append(heart);
 
-  div.classList.add("comment-list");
-
+  div.classList.add(`comment-list`);
   commentDiv.appendChild(div);
   commentText.value = "";
+
+  // 댓글 삭제 기능
+  const commentDel = a.parentElement;
+  commentDel.addEventListener("click", function(e) {
+    e.target.remove();
+  });
 };
+// 댓글 생성 엔터
 const addEnter = e => {
   if (e.keyCode === 13) {
     if (e.shiftKey === true) {
@@ -67,5 +74,6 @@ const navActive = () => {
 
 heart.addEventListener("click", heartOn);
 commentBtn.addEventListener("click", addBtn);
+
 commentText.addEventListener("keypress", addEnter);
 navSearch.addEventListener("click", navActive);
