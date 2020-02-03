@@ -16,11 +16,32 @@ const changeColor = e => {
     if (pwd.value && id.value) btn.style.backgroundColor = colorON;
   }
 };
+// 아이디 비밀번호 각각의 속성
+const idAttr = () => {
+  idInput.style.transformOrigin = "top left";
+  idInput.style.transform = "scale(.833) translateY(-10px)";
+  idInput.style.transition = "transform .3s";
+  id.style.padding = "5px 0px 0px 10px";
+};
 
+const pwdAttr = () => {
+  pwdInput.style.transformOrigin = "top left";
+  pwdInput.style.transform = "scale(.833) translateY(-10px)";
+  pwdInput.style.transition = "transform .3s";
+  pwd.style.padding = "5px 0px 0px 10px";
+};
+
+// 아이디 비밀번호 입력시 없으면 스타일 지정 x 있으면 속성적용
 const keypr = e => {
-  if (!e.target.value) {
+  if (!id.value) {
     idInput.style = "unset";
+  } else if (id.value) {
+    idAttr();
+  }
+  if (!pwd.value) {
     pwdInput.style = "unset";
+  } else if (pwd.value) {
+    pwdAttr();
   }
 };
 
@@ -29,17 +50,9 @@ const spanMove = e => {
   if (e.target === idInput) {
     id.focus();
     id.addEventListener("input", keypr);
-    idInput.style.transformOrigin = "top left";
-    idInput.style.transform = "scale(.833) translateY(-10px)";
-    idInput.style.transition = "transform .3s";
-    id.style.padding = "5px 0px 0px 10px";
   } else if (pwdInput === e.target) {
     pwd.focus();
     pwd.addEventListener("input", keypr);
-    pwdInput.style.transformOrigin = "top left";
-    pwdInput.style.transform = "scale(.833) translateY(-10px)";
-    pwdInput.style.transition = "transform .3s";
-    pwd.style.padding = "5px 0px 0px 10px";
   }
 };
 const spanOrigin = e => {
