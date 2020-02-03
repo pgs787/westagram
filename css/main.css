@@ -10,11 +10,11 @@ body {
     transform: scale(1);
   }
 }
-.heartOn {
+.heartOn,
+.heartOff {
   height: 40px;
   margin: 5px 10px;
   cursor: pointer;
-  z-index: 0;
   animation: heartload linear 0.3s;
 }
 
@@ -152,6 +152,12 @@ body {
   margin-left: 20px;
 }
 
+.sec {
+  position: absolute;
+  opacity: 0.2;
+  align-self: center;
+  right: 410px;
+}
 .add-comment-div {
   padding: 10px 10px;
   position: relative;
@@ -167,6 +173,7 @@ body {
   outline: none;
   color: black;
   overflow-y: visible;
+  width: 90%;
 }
 
 .add-comment-btn {

@@ -4,18 +4,19 @@ const commentBtn = document.querySelector(".add-comment-btn");
 const commentDiv = document.querySelector(".commnet-list-div");
 const mainHeart = document.getElementById("heart");
 const commentHeart = document.querySelector(".commentHeart");
+const navSearch = document.getElementById("nav-search");
 
 let toggle = true;
 
 const heartOn = e => {
   if (toggle) {
-    mainHeart.className = "heartOn";
-    mainHeart.src = "img/heart_like_love_twitter_icon_127132.png";
+    e.target.className = "heartOn";
+    e.target.src = "img/heart_like_love_twitter_icon_127132.png";
     toggle = false;
   } else {
-    mainHeart.src =
+    e.target.className = "heartOff";
+    e.target.src =
       "https://s3.ap-northeast-2.amazonaws.com/cdn.wecode.co.kr/bearu/heart.png";
-    mainHeart.className = "heartOff";
 
     toggle = true;
   }
@@ -50,5 +51,21 @@ const addEnter = e => {
   }
 };
 
+// nav 검색창
+const navActive = () => {
+  const fir = document.getElementById("fir");
+  const img = document.createElement("img");
+  const div = document.querySelector(".nav-div");
+  fir.style.left = "430px";
+  img.className = "sec";
+  img.style.height = "15px";
+  img.src = "img/images.png";
+  div.appendChild(img);
+  navSearch.style.textAlign = "left";
+  navSearch.style.textIndent = "35px";
+};
+
 heart.addEventListener("click", heartOn);
+commentBtn.addEventListener("click", addBtn);
 commentText.addEventListener("keypress", addEnter);
+navSearch.addEventListener("click", navActive);
