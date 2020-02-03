@@ -19,14 +19,14 @@ const changeColor = e => {
 // 아이디 비밀번호 각각의 속성
 const idAttr = () => {
   idInput.style.transformOrigin = "top left";
-  idInput.style.transform = "scale(.833) translateY(-10px)";
+  idInput.style.transform = "scale(.8) translateY(-10px)";
   idInput.style.transition = "transform .3s";
   id.style.padding = "5px 0px 0px 10px";
 };
 
 const pwdAttr = () => {
   pwdInput.style.transformOrigin = "top left";
-  pwdInput.style.transform = "scale(.833) translateY(-10px)";
+  pwdInput.style.transform = "scale(.8) translateY(-10px)";
   pwdInput.style.transition = "transform .3s";
   pwd.style.padding = "5px 0px 0px 10px";
 };
