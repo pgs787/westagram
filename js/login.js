@@ -74,6 +74,6 @@ setInterval(function paintImage() {
 
 id.addEventListener("input", changeColor);
 idInput.addEventListener("click", spanMove);
-
+  
 pwd.addEventListener("input", changeColor);
 pwdInput.addEventListener("click", spanMove);

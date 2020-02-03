@@ -128,7 +128,6 @@ body {
 .comment-list {
   white-space: pre-wrap;
   position: relative;
-
   font-weight: 100;
 }
 .comment-list img {
@@ -146,6 +145,7 @@ body {
   cursor: pointer;
   text-decoration: none;
 }
+
 .feed-bottom .comment-list {
   font-size: 15px;
   margin-top: 10px;
@@ -191,12 +191,15 @@ body {
 }
 
 /* 오른쪽 div */
-
-.right-div {
+.right-div-wrapper {
   position: fixed;
-  width: 310px;
+  width: 1000px;
+  height: 200px;
+}
+.right-div {
   position: absolute;
-  right: 100px;
+  width: 310px;
+  right: 10px;
 }
 .right-div-top {
   width: 293px;
