@@ -2,6 +2,13 @@
 * {
   box-sizing: border-box;
 }
+html,
+body {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
 .div-total-section {
   display: flex;
   height: 750px;
@@ -44,6 +51,7 @@
   z-index: 2;
   animation: img 1.5s ease-in;
 }
+
 .mist {
   z-index: 1;
   height: 434px;
@@ -61,12 +69,12 @@
 }
 /*right*/
 .info {
-  width: 350px;
+  width: 380px;
   text-align: center;
 }
 
 .div-info {
-  height: 370px;
+  height: 410px;
   border: 1px solid #e6e6e6;
   border-radius: 2px;
   margin-bottom: 10px;
@@ -75,31 +83,44 @@
 .div-info img {
   display: flex;
   width: 175px;
-  margin: 30px auto 12px;
+  margin: 30px auto 45px;
 }
 
 .info-main-wrapper {
-  width: 250px;
+  width: 280px;
   margin: 0 auto;
 }
 
-.info-main {
-  margin: 24px auto 15px;
+.info-main-input {
+  display: flex;
+  position: relative;
+  margin: 24px auto 5px;
 }
-
-.info-main input {
+.info-main-input:last-child {
+  margin-top: 5px;
+}
+.info-main-input input {
   background: #fafafa;
   border: 1px solid #efefef;
   border-radius: 3px;
-  color: #999;
   padding: 0px 10px;
   width: 100%;
-  height: 40px;
-  margin-bottom: 5px;
-  font-size: 12px;
+  height: 38px;
+  font-size: 14px;
 }
-.info-main input:nth-last-child(1) {
-  margin-bottom: 0px;
+
+.info-main-input span {
+  cursor: text;
+  user-select: none;
+  width: 100%;
+  padding: 0px 10px;
+  font-size: 13px;
+  text-align: left;
+  line-height: 45px;
+  color: #999;
+  position: absolute;
+  margin-bottom: 5px;
+  line-height: 40px;
 }
 
 .login-btn {
@@ -111,6 +132,7 @@
   color: white;
   font-weight: 600;
   font-size: 14px;
+  margin-top: 15px;
 }
 
 .spe-line {
@@ -138,6 +160,7 @@
   margin: auto 0px;
   color: #385185;
   font-weight: 600;
+  font-size: 14px;
 }
 .lose-pwd {
   text-align: center;
@@ -185,13 +208,16 @@
 /* 하단 */
 
 .foot-wrap {
-  width: 1100px;
-  margin: 0 auto;
+  width: 1200px;
+  left: 0;
   position: relative;
-  height: 50px;
+  right: 0;
+  bottom: 0;
+  margin: 0 auto;
+  height: 60px;
   color: black;
-  display: flex;
-  justify-content: space-between;
+  display: block;
+  justify-content: space-around;
 }
 .foot-left {
   font-size: 11px;
@@ -203,8 +229,48 @@
   margin-right: 20px;
 }
 .foot-right {
+  position: absolute;
+  right: 0;
+  top: 0;
   margin-right: 50px;
   color: #999;
   font-weight: 600;
   font-size: 10px;
+}
+
+/* 미디어쿼리 */
+@media screen and (max-width: 963px) {
+  .div-total-section {
+    margin: 0;
+  }
+  .main-div {
+    margin-top: 30px;
+  }
+  .login-img,
+  .mainImage {
+    display: none;
+  }
+
+  .foot-wrap {
+    width: 100%;
+    position: absolute;
+    bottom: 15px;
+    text-align: center;
+    display: block;
+  }
+  .foot-left {
+    font-size: 15px;
+    width: 650px;
+    display: inline-block;
+  }
+  .foot-left span {
+    margin: none;
+  }
+  .foot-right {
+    display: block;
+    position: relative;
+    margin: 0 auto;
+    margin-top: 10px;
+    font-size: 15px;
+  }
 }

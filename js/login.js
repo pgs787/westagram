@@ -1,22 +1,50 @@
 const id = document.getElementById("id");
+const idInput = document.getElementById("id-span");
 const pwd = document.getElementById("password");
+const pwdInput = document.getElementById("pwd-span");
+
 const btn = document.getElementById("logBtn");
-const img = document.getElementById("mainImage");
 const imglist = document.getElementsByClassName("mainImage");
 
 const colorON = "rgba(var(--h5f,56,151,240),1)";
 const colorOFF = "rgba(var(--h5f, 56, 151, 240), 0.3)";
 
+// 아이디, 비밀번호 최소 한글자
 const changeColor = e => {
   if (e !== id) {
-    if (pwd.value && e.target.value) btn.style.backgroundColor = colorON;
-    else btn.style.backgroundColor = colorOFF;
+    btn.style.backgroundColor = colorOFF;
+    if (pwd.value && id.value) btn.style.backgroundColor = colorON;
   }
 };
 
-id.addEventListener("input", changeColor);
-pwd.addEventListener("input", changeColor);
+const keypr = e => {
+  if (!e.target.value) {
+    idInput.style = "unset";
+    pwdInput.style = "unset";
+  }
+};
 
+// 아이디 비밀번호 입력시 span 애니메이션
+const spanMove = e => {
+  if (e.target === idInput) {
+    id.focus();
+    id.addEventListener("input", keypr);
+    idInput.style.transformOrigin = "top left";
+    idInput.style.transform = "scale(.833) translateY(-10px)";
+    idInput.style.transition = "transform .3s";
+    id.style.padding = "5px 0px 0px 10px";
+  } else if (pwdInput === e.target) {
+    pwd.focus();
+    pwd.addEventListener("input", keypr);
+    pwdInput.style.transformOrigin = "top left";
+    pwdInput.style.transform = "scale(.833) translateY(-10px)";
+    pwdInput.style.transition = "transform .3s";
+    pwd.style.padding = "5px 0px 0px 10px";
+  }
+};
+const spanOrigin = e => {
+  if (id.value.length) idInput.style = "none";
+};
 let i = 0;
 setInterval(function paintImage() {
   if (i === imglist.length - 1) {
@@ -30,9 +58,8 @@ setInterval(function paintImage() {
   }
 }, 2000);
 
-// setInterval(function paintImage() {
-//   const random = Math.floor(Math.random() * IMG_NUM) + 1;
-//   img.style.backgroundImage = `url(img/${random}.jpg)`;
-//   img.style.backgroundRepeat = "no-repeat";
-//   img.style.backgroundSize = "100%";
-// }, 1000);
+id.addEventListener("input", changeColor);
+idInput.addEventListener("click", spanMove);
+
+pwd.addEventListener("input", changeColor);
+pwdInput.addEventListener("click", spanMove);
