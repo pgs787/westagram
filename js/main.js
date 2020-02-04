@@ -5,6 +5,7 @@ const commentDiv = document.querySelector(".commnet-list-div");
 const mainHeart = document.getElementById("heart");
 const commentHeart = document.querySelector(".commentHeart");
 const navSearch = document.getElementById("nav-search");
+const like = document.querySelector(".like");
 
 let toggle = true;
 
@@ -12,12 +13,13 @@ const heartOn = e => {
   if (toggle) {
     e.target.className = "heartOn";
     e.target.src = "img/heart_like_love_twitter_icon_127132.png";
+    like.innerText = "2개";
     toggle = false;
   } else {
     e.target.className = "heartOff";
     e.target.src =
       "https://s3.ap-northeast-2.amazonaws.com/cdn.wecode.co.kr/bearu/heart.png";
-
+    like.innerText = "1개";
     toggle = true;
   }
 };
@@ -69,6 +71,7 @@ const navActive = () => {
   navSearch.style.textAlign = "left";
   navSearch.style.textIndent = "35px";
 };
+// 좋아요 숫자
 
 heart.addEventListener("click", heartOn);
 commentBtn.addEventListener("click", addBtn);

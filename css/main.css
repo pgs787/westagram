@@ -10,12 +10,24 @@ body {
     transform: scale(1);
   }
 }
-.heartOn,
-.heartOff {
+@keyframes heartl {
+  from {
+    transform: scale(1.5);
+  }
+  to {
+    transform: scale(1);
+  }
+}
+.heartOn {
   height: 40px;
   margin: 5px 10px;
   cursor: pointer;
   animation: heartload linear 0.3s;
+}
+.heartOff {
+  margin: 0;
+  cursor: pointer;
+  animation: heartl linear 0.3s;
 }
 
 /* 상단 Nav 바 */
