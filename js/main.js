@@ -23,6 +23,7 @@ const heartOn = e => {
     toggle = true;
   }
 };
+
 // 댓글 생성 버튼
 const addBtn = () => {
   const div = document.createElement("div");
@@ -41,12 +42,13 @@ const addBtn = () => {
   div.classList.add(`comment-list`);
   commentDiv.appendChild(div);
   commentText.value = "";
-
+  dd = div;
   // 댓글 삭제 기능
   div.addEventListener("click", function(e) {
     e.target.remove();
   });
 };
+
 // 댓글 생성 엔터
 const addEnter = e => {
   if (e.keyCode === 13) {
@@ -65,6 +67,7 @@ const navActive = () => {
   const div = document.querySelector(".nav-div");
   fir.style.left = "430px";
   img.className = "sec";
+  img.s;
   img.style.height = "15px";
   img.src = "img/images.png";
   div.appendChild(img);
